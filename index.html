@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading - Portfolio</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/df8efacf72.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <main>
+      <div class="triangles" id="loading">
+        <div class="tri invert"></div>
+        <div class="tri invert"></div>
+        <div class="tri"></div>
+        <div class="tri invert"></div>
+        <div class="tri invert"></div>
+        <div class="tri"></div>
+        <div class="tri invert"></div>
+        <div class="tri"></div>
+        <div class="tri invert"></div>
+      </div>
+        <script>
+            window.onload = function() {
+              setTimeout(function() {
+                document.getElementById("loading").style.display = "none";
+                window.location.href = "about.html";
+              }, 1500);
+            };
+          </script>
+    </main>
+</body>
+
+</html>
