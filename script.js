@@ -7,12 +7,18 @@ function typeWriter() {
     document.getElementById("demo").innerHTML += text.charAt(i);
     i = i + 1;
     setTimeout(typeWriter, 100);
-  }
-  else {
+  } else {
     setInterval(function () {
+      if (window.innerWidth < 915) {
+        cursor = "";
+      } else {
+        cursor = "|";
+      }
       document.getElementById("demo").innerHTML += cursor;
       setTimeout(function () {
-        document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML.slice(0, -1);
+        document.getElementById("demo").innerHTML = document
+          .getElementById("demo")
+          .innerHTML.slice(0, -1);
       }, 500);
     }, 1000);
   }
@@ -33,6 +39,3 @@ function moveWhitKeyTop(sitio) {
     }
   });
 }
-
-
-
